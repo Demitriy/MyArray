@@ -249,7 +249,7 @@ void Vector<T>::push_back(const value_type& value) {
         for(size_type i = 0; i < size_ - 1; ++i) {
             *(tmp + i) = *(data_ + i);
         }
-        *(++tmp) = value;
+        *(tmp + size_ - 1) = value;
         data_ = tmp;
     }
 }
